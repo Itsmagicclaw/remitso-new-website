@@ -1264,3 +1264,15 @@ footer h5 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter
 .blog-cert-box { border: 1px solid var(--rs-bd); border-radius: 12px; overflow: hidden; background: #fff; padding-bottom: 14px; }
 .blog-cert-badges { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px 16px; }
 .blog-cert-badge { background: #f0f4ff; color: #3b4a6b; border: 1px solid #d0d8f0; border-radius: 20px; padding: 4px 10px; font-size: 11px; font-weight: 600; }
+
+/* ═══ START-MONEY-TRANSFER SECTION ═══ */
+.rs-timeline { display:flex; flex-direction:column; gap:1.5rem; }
+.rs-tl-item { display:flex; gap:1rem; align-items:flex-start; }
+.rs-tl-num { min-width:2rem; height:2rem; background:var(--rs-blue); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.85rem; flex-shrink:0; }
+.rs-step-num { width:3rem; height:3rem; background:var(--rs-blue); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.1rem; }
+.rs-badge-green { background:#dcfce7; color:#166534; font-size:.7rem; font-weight:700; padding:.25rem .6rem; border-radius:20px; white-space:nowrap; }
+.rs-badge-amber { background:#fef9c3; color:#854d0e; font-size:.7rem; font-weight:700; padding:.25rem .6rem; border-radius:20px; white-space:nowrap; }
+.rs-link-arrow { color:var(--rs-blue); font-weight:600; font-size:.9rem; }
+.rs-link-arrow:hover { text-decoration:underline; }
+.rs-country-card:hover .rs-card { border-color:var(--rs-blue); box-shadow:0 8px 24px rgba(37,99,235,.12); }
+.rs-price-from { font-size:.95rem; color:var(--rs-slate); }
