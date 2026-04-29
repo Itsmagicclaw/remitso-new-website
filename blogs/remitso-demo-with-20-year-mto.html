@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inside a RemitSo Demo with a 20-Year MTO | RemitSo</title>
+<meta name="description" content="Discover how a 20-year EU MTO modernized its legacy platform using RemitSo’s headless tech, PSD2 compliance, and hybrid RaaS model.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://remitso-site-v2.vercel.app/blogs/remitso-demo-with-20-year-mto">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Inside a RemitSo Demo with a 20-Year MTO">
+<meta property="og:description" content="Discover how a 20-year EU MTO modernized its legacy platform using RemitSo’s headless tech, PSD2 compliance, and hybrid RaaS model.">
+<meta property="og:url" content="https://remitso-site-v2.vercel.app/blogs/remitso-demo-with-20-year-mto">
+<meta property="og:site_name" content="RemitSo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Satish Shrivastava",
+  "url": "https://www.remitso.com/blogs",
+  "jobTitle": "Content Strategist",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "RemitSo",
+    "url": "https://remitso.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "RemitSo",
+  "legalName": "Prymera Consulting Pvt Ltd",
+  "url": "https://www.remitso.com",
+  "logo": "https://www.remitso.com/img/fav.svg",
+  "description": "RemitSo provides white-label international money transfer software and remittance-as-a-service infrastructure, enabling entrepreneurs and businesses to launch compliant, branded money transfer operations.",
+  "foundingDate": "2010",
+  "email": "Connect@remitso.com",
+  "telephone": "+918904500297",
+  "sameAs": [
+    "https://www.linkedin.com/company/remitso",
+    "https://twitter.com/remitso"
+  ],
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560095",
+      "streetAddress": "Bizzhub Aspire, 100 Feet Rd, Koramangala",
+      "addressCountry": "IN",
+      "name": "Global Sales & Service"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Kolkata",
+      "addressRegion": "West Bengal",
+      "postalCode": "700091",
+      "streetAddress": "GN34/1, Aurora Water Front, Unit 10, Floor 16, Sector V, Salt Lake",
+      "addressCountry": "IN",
+      "name": "Global Delivery"
+    }
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "Connect@remitso.com",
+      "telephone": "+918904500297",
+      "availableLanguage": "English"
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+918904500297",
+      "contactOption": "WhatsApp",
+      "availableLanguage": "English"
+    }
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": "Worldwide"
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "ISO/IEC 27001:2022"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "ISO 9001:2015"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "PCI-DSS"
+    }
+  ],
+  "knowsAbout": [
+    "Money Transfer Software",
+    "White-label Remittance Platform",
+    "Remittance-as-a-Service",
+    "Cross-border Payments",
+    "International Money Transfer",
+    "AML Compliance Software",
+    "KYC Onboarding Automation",
+    "Transaction Monitoring",
+    "Anti-Money Laundering",
+    "MSB Licensing",
+    "Money Transmitter License",
+    "FCA Regulated Payments",
+    "FINTRAC Compliance",
+    "AUSTRAC Compliance",
+    "FinCEN Registration",
+    "Fintech SaaS",
+    "Payment Technology",
+    "FX Rate Management",
+    "Payout Networks",
+    "Multi-corridor Remittance",
+    "Mobile Money Transfer App",
+    "Compliance-as-a-Service",
+    "Startup Fintech Licensing",
+    "Banking-as-a-Service Integration",
+    "Neo-bank Payments",
+    "Credit Union Remittance",
+    "Exchange House Software",
+    "B2B Cross-border Payments",
+    "Diaspora Remittance",
+    "Send Money Abroad"
+  ]
+}
+</script>
+
+</head>
+<body>
+<nav class="rs-nav navbar navbar-expand-lg" id="nav">
+  <div class="container-xl">
+    <a class="navbar-brand rs-nav-logo" href="/"><img src="https://www.remitso.com/img/Remitso-logo-RaaS-dark.png" alt="RemitSo" height="36"></a>
+    <div class="d-flex align-items-center gap-3 d-lg-none">
+      <button class="rs-hamburger" id="mobileMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="collapse navbar-collapse justify-content-center" id="rsNavCollapse">
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item"><a class="nav-link" href="/features">Features</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pricing</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="/pricing">PaaS Pricing</a></li>
+            <li><a class="dropdown-item" href="/source-code-pricing">Source Code Pricing</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Solutions</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="/enterprise">For Enterprise</a></li>
+            <li><a class="dropdown-item" href="/startup">For Startups</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">RaaS</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="/raas-australia">RaaS Australia</a></li>
+            <li><a class="dropdown-item" href="/raas-canada">RaaS Canada</a></li>
+            <li><a class="dropdown-item" href="/raas-europe">RaaS Europe</a></li>
+            <li><a class="dropdown-item" href="/raas-uk">RaaS UK</a></li>
+            <li><a class="dropdown-item" href="/raas-usa">RaaS USA</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Industries</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="/banks">Banks</a></li>
+            <li><a class="dropdown-item" href="/neo-banks">Neo Banks</a></li>
+            <li><a class="dropdown-item" href="/credit-unions">Credit Unions</a></li>
+            <li><a class="dropdown-item" href="/fintechs">Fintechs</a></li>
+            <li><a class="dropdown-item" href="/msb">MSB</a></li>
+            <li><a class="dropdown-item" href="/exchange-houses">Exchange Houses</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="https://compliance.remitso.com/">Compliance</a></li>
+            <li><a class="dropdown-item" href="https://www.remitso.com/money-transfer-software-development">Bespoke Development</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/demo-apps">Demo Apps</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/blogs">Blog</a></li>
+      </ul>
+    </div>
+    <div class="d-none d-lg-flex align-items-center gap-3">
+      <a href="https://www.remitso.com/contact" class="btn-rs-ghost">Book a Demo</a>
+      <a href="https://www.remitso.com/contact" class="btn-rs-primary">Get Started &rarr;</a>
+    </div>
+  </div>
+</nav>
+<div class="rs-mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="rs-mobile-menu-inner">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <img src="https://www.remitso.com/img/Remitso-logo-RaaS-dark.png" alt="RemitSo" height="30">
+      <button class="rs-mobile-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="rs-mobile-nav" id="mobNav">
+      <a href="/features" onclick="closeMobileMenu()">Features</a>
+      <div class="rs-mob-acc-wrap">
+        <button class="rs-mob-acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mob-pricing" data-bs-parent="#mobNav" aria-expanded="false">Pricing</button>
+        <div class="collapse" id="mob-pricing"><div class="rs-mob-acc-panel">
+          <a href="/pricing" onclick="closeMobileMenu()">PaaS Pricing</a>
+          <a href="/source-code-pricing" onclick="closeMobileMenu()">Source Code Pricing</a>
+        </div></div>
+      </div>
+      <div class="rs-mob-acc-wrap">
+        <button class="rs-mob-acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mob-solutions" data-bs-parent="#mobNav" aria-expanded="false">Solutions</button>
+        <div class="collapse" id="mob-solutions"><div class="rs-mob-acc-panel">
+          <a href="/enterprise" onclick="closeMobileMenu()">For Enterprise</a>
+          <a href="/startup" onclick="closeMobileMenu()">For Startups</a>
+        </div></div>
+      </div>
+      <div class="rs-mob-acc-wrap">
+        <button class="rs-mob-acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mob-raas" data-bs-parent="#mobNav" aria-expanded="false">RaaS</button>
+        <div class="collapse" id="mob-raas"><div class="rs-mob-acc-panel">
+          <a href="/raas-australia" onclick="closeMobileMenu()">RaaS Australia</a>
+          <a href="/raas-canada" onclick="closeMobileMenu()">RaaS Canada</a>
+          <a href="/raas-europe" onclick="closeMobileMenu()">RaaS Europe</a>
+          <a href="/raas-uk" onclick="closeMobileMenu()">RaaS UK</a>
+          <a href="/raas-usa" onclick="closeMobileMenu()">RaaS USA</a>
+        </div></div>
+      </div>
+      <a href="/demo-apps" onclick="closeMobileMenu()">Demo Apps</a>
+      <a href="/blogs" onclick="closeMobileMenu()">Blog</a>
+    </nav>
+    <div class="rs-mobile-ctas mt-4">
+      <a href="https://www.remitso.com/contact" class="btn-rs-primary d-block text-center mb-3">Get Started &rarr;</a>
+      <a href="https://www.remitso.com/contact" class="btn-rs-ghost d-block text-center">Book a Demo</a>
+    </div>
+  </div>
+</div>
+
+<section class="blog-hero">
+  <div class="container-xl">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb blog-hero-breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/blogs">Blog</a></li>
+        <li class="breadcrumb-item active">Inside a RemitSo Demo with a 20-Year MTO</li>
+      </ol>
+    </nav>
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="blog-hero-badge mb-3">✦ INSIGHTS</div>
+        <h1 class="blog-hero-title mb-4">Inside a RemitSo Demo with<br><span class="blog-hero-accent">a 20-Year MTO</span></h1>
+        <p class="blog-hero-desc mb-4">Discover how a 20-year EU MTO modernized its legacy platform using RemitSo’s headless tech, PSD2 compliance, and hybrid RaaS model.</p>
+        <div class="blog-hero-meta">
+          <span>⏱ 12 min read</span>
+          <span class="blog-hero-dot">·</span>
+          <span>🖊 <a href="https://www.remitso.com/blogs" style="color:inherit;text-decoration:none;" class="blog-author-link">Satish Shrivastava</a></span>
+          <span class="blog-hero-dot">·</span>
+          <span>📅 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><div class="container-xl py-5"><div class="row g-5"><div class="col-lg-8"><article class="blog-article" itemscope itemtype="https://schema.org/BlogPosting"><meta itemprop="headline" content="Inside a RemitSo Demo with a 20-Year MTO"><div itemprop="articleBody"><h1>From Legacy Pain to Modern Gain: Inside a RemitSo Demo with a 20-Year MTO
+                        </h1>
+
+                        <p>We recently sat down for a demo with a leadership team from a highly-established Money Transfer Operator (MTO) based in the European Union. With over 20 years in the business, they came to the table with deep industry knowledge and a critical challenge: their 10-year-old, custom-built platform was becoming "heavy," "old," and prohibitively expensive to maintain.</p>
+                        <p>They were at a crossroads familiar to many mature MTOs: risk an expensive, multi-year internal rebuild or find a modern technology partner.</p>
+                        <p>Their team, including the CEO and the Head of Compliance, asked sharp, insightful questions that cut straight to the core challenges that established operators face. Here’s a summary of the conversation and the solutions we discussed.</p>
+
+                        <h2 class="font-weight-bold mb-2">"Can We Keep Our Front End?" — The Hybrid Model</h2>
+                        <p>One of the CEO’s first questions was about flexibility. Their company had invested heavily in its customer-facing web and mobile applications and wanted to retain its established brand experience.</p>
+                        <p><strong>Their Question:</strong> “Is it possible with you to connect to your back end with our own front-end applications?”</p>
+                        <p><strong>The Answer:</strong> Absolutely. This is one of the primary use cases for our platform. Our back office is built to be completely “headless,” meaning it operates entirely through APIs — a powerful engine that can be connected to any user interface.</p>
+                        <p>An established MTO can maintain its entire customer-facing experience while instantly outsourcing the most complex operational components to our back end.</p>
+                        <ul class="mb-4 blog-sec-layout">
+                            <li>Global payment and payout networks</li>
+                            <li>AML and compliance rule engines</li>
+                            <li>Treasury management</li>
+                            <li>Full transaction ledgers and reporting</li>
+                        </ul>
+                        <p>This hybrid model provides the best of both worlds — MTOs preserve their brand identity while benefiting from a scalable, fully managed backend infrastructure.</p>
+
+                        <h2 class="font-weight-bold mb-2">The Compliance Deep-Dive: PSD2 and Strong Customer Authentication (SCA)</h2>
+                        <p>With a Head of Compliance on the call, the conversation turned toward EU and UK-specific regulations — particularly PSD2 and Strong Customer Authentication (SCA). The key focus was balancing security and user convenience.</p>
+                        <p><strong>Their Question:</strong> “How do you handle two-factor authentication? Can a customer save their device so they don’t have to enter an OTP every time?”</p>
+                        <p><strong>The Answer:</strong> Our platform is fully PSD2 compliant and built for a seamless, secure experience. We employ a multi-layered authentication system that fulfills all regulatory requirements while minimizing friction.</p>
+                        <ul class="mb-4 blog-sec-layout">
+                            <li><strong>For Web:</strong> Standard email/password login, with OTP (via email or SMS) when logging in from a new device or browser.</li>
+                            <li><strong>For Mobile:</strong> Uses biometrics (FaceID, fingerprint) or a device-specific PIN stored only on the device, meeting the two-factor criteria:
+                                <ul>
+                                    <li><strong>Possession:</strong> The user’s physical device.</li>
+                                    <li><strong>Knowledge/Inherence:</strong> The user’s PIN or biometric data.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>This means mobile users enjoy a fast, secure login without SMS delays, while MTOs remain fully compliant with PSD2 standards.</p>
+
+                        <h2 class="font-weight-bold mb-2">The Business Model Deep-Dive: RaaS vs. Source Code</h2>
+                        <p>The CEO’s next focus was on flexibility and long-term control — specifically whether they could license the platform or acquire the complete source code.</p>
+                        <p><strong>Their Question:</strong> “What are our options? Can we license the platform, or even purchase the source code?”</p>
+                        <p><strong>The Answer:</strong> We offer two clear engagement paths tailored to the MTO’s business maturity and strategy.</p>
+                        <ul class="mb-4 blog-sec-layout">
+                            <li><strong>Remittance-as-a-Service (RaaS):</strong> The fastest route to market. MTOs pay a one-time setup fee plus a tiered, volume-based transaction fee. This includes ongoing updates and platform maintenance.</li>
+                            <li><strong>Full Source Code Purchase:</strong> For maximum independence, MTOs can acquire the complete source code through a one-time license fee. This includes a 12-month warranty and six months of dedicated support for knowledge transfer and onboarding their IT team.</li>
+                        </ul>
+                        <p>This flexibility allows clients to start lean and agile under the RaaS model, then transition to full ownership once they achieve scale.</p>
+
+                        <h2 class="font-weight-bold mb-2">Back-Office Features That "Exceeded Expectations"</h2>
+                        <p>During the back-office demo, several features impressed the prospective client. These weren’t superficial additions—they were the result of over a decade of hands-on experience managing compliance and operations in the remittance industry.</p>
+                        <ul class="mb-4 blog-sec-layout">
+                            <li><strong>In-Built, Free Sanctions Screening:</strong> Automatic screening of all senders and receivers against major global lists (OFAC, EU, UK, UN, and others).</li>
+                            <li><strong>Highly Configurable AML Rules:</strong> Compliance teams can define transaction limits, documentation thresholds, and corridor-specific requirements with ease.</li>
+                            <li><strong>Internal SAR Filing:</strong> Built-in tools for creating, reviewing, and auditing Suspicious Activity Reports (SARs), maintaining regulator-ready records.</li>
+                            <li><strong>Granular Transaction States:</strong> Over 80 transaction statuses track every step from initiation to completion. Automation ensures instant actions, like retrying failed payouts directly from the dashboard.</li>
+                        </ul>
+
+                        <h2 class="font-weight-bold mb-2">Go-to-Market Strategy: The Power of Pre-Integrated Partners</h2>
+                        <p>The client team wanted to expand from EU/UK corridors into high-volume markets such as the UK-to-India route. Their concern was how to enter efficiently—without excessive marketing spend.</p>
+                        <p><strong>Their Question:</strong> “How could we enter the Indian market without spending millions on ads?”</p>
+                        <p><strong>The Answer:</strong> Technology is only half of success — the other half is having strong payout partnerships. Our platform comes pre-integrated with leading global partners, allowing clients to launch instantly in key markets.</p>
+                        <ul class="mb-4 blog-sec-layout">
+                            <li><strong>A Flat-Fee Model:</strong> Simple, predictable pricing per transaction—no percentage-based surprises.</li>
+                            <li><strong>Hyper-Competitive FX:</strong> Rates close to mid-market levels, enabling MTOs to compete with top global brands.</li>
+                            <li><strong>Total Network Coverage:</strong> One integration connects to all Indian banks, a nationwide cash pickup network, and UPI infrastructure.</li>
+                        </ul>
+                        <p>This means RemitSo clients can launch in India within days — not months — with world-class coverage and pricing advantages.</p>
+
+                        <h2 class="font-weight-bold mb-2">The Final Takeaway</h2>
+                        <p>After an in-depth, two-hour session, the CEO concluded that the platform was “very interesting” and an ideal foundation for modernizing their operations.</p>
+                        <p>Upgrading from a decade-old legacy system is not just about cost savings — it’s about gaining flexibility, speed, and a modular, future-proof architecture that enables easy expansion into new services like wallets or card issuing.</p>
+                        <p><strong>Are you an established MTO struggling with outdated technology?</strong> Book a demo with the RemitSo team to experience how our platform can transform your operations and unlock new growth opportunities.</p>
+
+
+
+
+
+                        <div class="blog-security-last">
+                            <p>
+                                Want to see how a ready-made platform can accelerate your growth?
+                            </p>
+
+                            <p class="highlight">
+                                Book a demo or consult with us at RemitSo today to see how our platform can power your growth.
+                            </p>
+
+                            <p> <a href="" data-toggle="modal" data-bs-target="#exampleModal-request-demo-2"> Request Demo</a> </p>
+                        </div></div></article></div><div class="col-lg-4">
+
+  <!-- ── TABLE OF CONTENTS ── -->
+  <div class="blog-sidebar-box mb-4">
+    <div class="blog-sidebar-box-hd">📋 In This Article</div>
+    <div class="blog-card-body">
+      <ul class="blog-toc-list list-unstyled mb-0" id="tocList"></ul>
+    </div>
+  </div>
+
+  <!-- ── PROMO: FREE DEMO ── -->
+  <div class="blog-promo-cta mb-4">
+    <div class="blog-promo-badge">🚀 Free 30-Min Demo</div>
+    <h5 class="blog-promo-h">Launch Your Money Transfer Business</h5>
+    <p class="blog-promo-sub">White-label platform. 4–8 week launch. No revenue share.</p>
+    <a href="/remittance-software/" class="btn-rs-primary d-block text-center mb-2">Book a Free Demo &rarr;</a>
+    <a href="https://wa.me/+918904500297?text=Hi+RemitSo,+I+want+to+learn+more." target="_blank" class="blog-promo-wa">💬 WhatsApp Us Now</a>
+  </div>
+
+  <!-- ── RELATED POSTS ── -->
+  <div class="blog-sidebar-box mb-4">
+    <div class="blog-sidebar-box-hd">📖 Related Articles</div>
+    <ul class="list-unstyled mb-0 blog-sidebar-links">
+        <li><a href="/blogs/sanctions-screening-online-remittance-2026/" class="blog-sidebar-link">Sanctions Screening in Online Remittance: MTO Compliance Guide 2026</a></li>
+        <li><a href="/blogs/how-to-start-a-money-remittance-business-in-canada/" class="blog-sidebar-link">How to Start a Money Remittance Business in Canada</a></li>
+        <li><a href="/blogs/best-payout-partner-strategy-for-money-transfer-startups/" class="blog-sidebar-link">Best Payout Partner Strategy for Money Transfer Startups</a></li>
+        <li><a href="/blogs/licensed-money-transfer-operators-high-risk-customers/" class="blog-sidebar-link">How Licensed Money Transfer Operators Detect High</a></li>
+        <li><a href="/blogs/how-remitso-transforms-cross-border-payments/" class="blog-sidebar-link">How RemitSo Transforms Global Remittance Management</a></li>
+        <li><a href="/blogs/fatf-february-2026-plenary-what-every-money-transfer-operator-needs-to-know/" class="blog-sidebar-link">FATF February 2026 Plenary: What Every Money Transfer Operator Needs to Know</a></li>
+    </ul>
+  </div>
+
+  <!-- ── FEATURED PAGES ── -->
+  <div class="blog-sidebar-box mb-4">
+    <div class="blog-sidebar-box-hd">🔗 Explore RemitSo</div>
+    <ul class="list-unstyled mb-0 blog-sidebar-links">
+        <li><a href="/remittance-software/" class="blog-sidebar-link">Remittance Software Platform</a></li>
+        <li><a href="/pricing" class="blog-sidebar-link">PaaS Pricing — from $7,499</a></li>
+        <li><a href="/source-code-pricing" class="blog-sidebar-link">Source Code Licence — $77,999</a></li>
+        <li><a href="/raas-usa" class="blog-sidebar-link">RaaS USA — 50-State Coverage</a></li>
+        <li><a href="/raas-uk" class="blog-sidebar-link">RaaS UK — FCA Licensed</a></li>
+        <li><a href="/raas-australia" class="blog-sidebar-link">RaaS Australia — AUSTRAC</a></li>
+        <li><a href="/features" class="blog-sidebar-link">Platform Features</a></li>
+        <li><a href="/demo-apps" class="blog-sidebar-link">Try Demo Apps</a></li>
+    </ul>
+  </div>
+
+  <!-- ── PROMO: KEY STATS ── -->
+  <div class="blog-stats-box mb-4">
+    <div class="blog-sidebar-box-hd">📊 RemitSo by the Numbers</div>
+    <div class="blog-stat-row"><span class="blog-stat-num">$2.5B+</span><span class="blog-stat-lbl">Annual transaction volume</span></div>
+    <div class="blog-stat-row"><span class="blog-stat-num">99.99%</span><span class="blog-stat-lbl">Platform uptime SLA</span></div>
+    <div class="blog-stat-row"><span class="blog-stat-num">15 sec</span><span class="blog-stat-lbl">KYC onboarding time</span></div>
+    <div class="blog-stat-row"><span class="blog-stat-num">100+</span><span class="blog-stat-lbl">Payout countries</span></div>
+    <div class="blog-stat-row"><span class="blog-stat-num">$7,499</span><span class="blog-stat-lbl">PaaS one-time setup</span></div>
+  </div>
+
+  <!-- ── PROMO: CERTIFICATIONS ── -->
+  <div class="blog-cert-box">
+    <div class="blog-sidebar-box-hd">🔐 Certified &amp; Trusted</div>
+    <div class="blog-cert-badges">
+      <span class="blog-cert-badge">ISO 27001:2022</span>
+      <span class="blog-cert-badge">ISO 9001:2015</span>
+      <span class="blog-cert-badge">PCI-DSS</span>
+      <span class="blog-cert-badge">97% Auto AML</span>
+    </div>
+    <a href="/remittance-software/" class="blog-promo-wa mt-3 d-block">View Platform &rarr;</a>
+  </div>
+
+</div></div></div></div><footer class="rs-footer pt-5 pb-4">
+  <div class="container-xl">
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4">
+        <a href="/"><img src="https://www.remitso.com/img/Remitso-logo-RaaS-dark.png" alt="RemitSo" height="36" class="mb-3"></a>
+        <p class="text-muted small lh-lg mb-3">White-label remittance software powering $2.5B+ in annual transaction volume. Launch your money transfer business in weeks, not years.</p>
+        <div class="d-flex gap-3 align-items-center flex-wrap">
+          <span class="badge bg-primary-subtle text-primary small">ISO 27001</span>
+          <span class="badge bg-success-subtle text-success small">PCI-DSS</span>
+          <span class="badge bg-warning-subtle text-warning small">ISO 9001</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="fw-semibold small mb-3 rs-text-navy">Platform</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="/features" class="text-muted text-decoration-none">Features</a></li>
+          <li class="mb-2"><a href="/pricing" class="text-muted text-decoration-none">Pricing</a></li>
+          <li class="mb-2"><a href="/source-code-pricing" class="text-muted text-decoration-none">Source Code</a></li>
+          <li class="mb-2"><a href="/demo-apps" class="text-muted text-decoration-none">Demo Apps</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="fw-semibold small mb-3 rs-text-navy">Company</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="/blogs" class="text-muted text-decoration-none">Blog</a></li>
+          <li class="mb-2"><a href="/case-studies.html" class="text-muted text-decoration-none">Case Studies</a></li>
+          <li class="mb-2"><a href="/faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+          <li class="mb-2"><a href="/privacy-policy" class="text-muted text-decoration-none">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="fw-semibold small mb-3 rs-text-navy">Solutions</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="/startup" class="text-muted text-decoration-none">For Startups</a></li>
+          <li class="mb-2"><a href="/enterprise" class="text-muted text-decoration-none">Enterprise</a></li>
+          <li class="mb-2"><a href="/banks" class="text-muted text-decoration-none">Banks</a></li>
+          <li class="mb-2"><a href="/fintechs" class="text-muted text-decoration-none">Fintechs</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="fw-semibold small mb-3 rs-text-navy">Contact</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="mailto:Connect@remitso.com" class="text-muted text-decoration-none">Connect@remitso.com</a></li>
+          <li class="mb-2"><a href="https://wa.me/918904500297" class="text-muted text-decoration-none">WhatsApp</a></li>
+          <li class="mb-2"><a href="https://www.remitso.com/contact" class="text-muted text-decoration-none">Book a Demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-top pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="text-muted small mb-0">&copy; 2026 Prymera Consulting Pvt Ltd. All rights reserved. RemitSo&reg; is a registered brand.</p>
+      <div class="d-flex gap-3">
+        <a href="/privacy-policy" class="text-muted small text-decoration-none">Privacy</a>
+        <a href="/terms" class="text-muted small text-decoration-none">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+function openMobileMenu() { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeMobileMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+});
+const tocLinks = document.querySelectorAll('.blog-toc-item a');
+const secEls = document.querySelectorAll('[id^="sec-"]');
+if (secEls.length > 0) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('fw-semibold'));
+        const a = document.querySelector('.blog-toc-item a[href="#' + e.target.id + '"]');
+        if (a) a.classList.add('fw-semibold');
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-80px 0px -60% 0px' });
+  secEls.forEach(s => obs.observe(s));
+}
+</script>
+</body>
+</html>

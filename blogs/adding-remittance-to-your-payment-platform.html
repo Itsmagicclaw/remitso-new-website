@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adding Remittance to Your Payment Platform: 2026 Guide | RemitSo</title>
+<meta name="description" content="This guide explores the key considerations for integrating remittance services into your payment platform, including regulatory compliance, technology requirements, and market opportunities.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://remitso-site-v2.vercel.app/blogs/adding-remittance-to-your-payment-platform">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Adding Remittance to Your Payment Platform: 2026 Guide">
+<meta property="og:description" content="This guide explores the key considerations for integrating remittance services into your payment platform, including regulatory compliance, technology requirements, and market opportunities.">
+<meta property="og:url" content="https://remitso-site-v2.vercel.app/blogs/adding-remittance-to-your-payment-platform">
+<meta property="og:site_name" content="RemitSo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Satish Shrivastava",
+  "url": "https://www.remitso.com/blogs",
+  "jobTitle": "Content Strategist",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "RemitSo",
+    "url": "https://remitso.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "RemitSo",
+  "legalName": "Prymera Consulting Pvt Ltd",
+  "url": "https://www.remitso.com",
+  "logo": "https://www.remitso.com/img/fav.svg",
+  "description": "RemitSo provides white-label international money transfer software and remittance-as-a-service infrastructure, enabling entrepreneurs and businesses to launch compliant, branded money transfer operations.",
+  "foundingDate": "2010",
+  "email": "Connect@remitso.com",
+  "telephone": "+918904500297",
+  "sameAs": [
+    "https://www.linkedin.com/company/remitso",
+    "https://twitter.com/remitso"
+  ],
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560095",
+      "streetAddress": "Bizzhub Aspire, 100 Feet Rd, Koramangala",
+      "addressCountry": "IN",
+      "name": "Global Sales & Service"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Kolkata",
+      "addressRegion": "West Bengal",
+      "postalCode": "700091",
+      "streetAddress": "GN34/1, Aurora Water Front, Unit 10, Floor 16, Sector V, Salt Lake",
+      "addressCountry": "IN",
+      "name": "Global Delivery"
+    }
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "Connect@remitso.com",
+      "telephone": "+918904500297",
+      "availableLanguage": "English"
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+918904500297",
+      "contactOption": "WhatsApp",
+      "availableLanguage": "English"
+    }
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": "Worldwide"
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "ISO/IEC 27001:2022"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "ISO 9001:2015"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "PCI-DSS"
+    }
+  ],
+  "knowsAbout": [
+    "Money Transfer Software",
+    "White-label Remittance Platform",
+    "Remittance-as-a-Service",
+    "Cross-border Payments",
+    "International Money Transfer",
+    "AML Compliance Software",
+    "KYC Onboarding Automation",
+    "Transaction Monitoring",
+    "Anti-Money Laundering",
+    "MSB Licensing",
+    "Money Transmitter License",
+    "FCA Regulated Payments",
+    "FINTRAC Compliance",
+    "AUSTRAC Compliance",
+    "FinCEN Registration",
+    "Fintech SaaS",
+    "Payment Technology",
+    "FX Rate Management",
+    "Payout Networks",
+    "Multi-corridor Remittance",
+    "Mobile Money Transfer App",
+    "Compliance-as-a-Service",
+    "Startup Fintech Licensing",
+    "Banking-as-a-Service Integration",
+    "Neo-bank Payments",
+    "Credit Union Remittance",
+    "Exchange House Software",
+    "B2B Cross-border Payments",
+    "Diaspora Remittance",
+    "Send Money Abroad"
+  ]
+}
+</script>
+
+</head>
+<body>
+<nav class="rs-nav navbar navbar-expand-lg" id="nav">
+  <div class="container-xl">
+    <a class="navbar-brand rs-nav-logo" href="/"><img src="https://www.remitso.com/img/Remitso-logo-RaaS-dark.png" alt="RemitSo" height="36"></a>
+    <div class="d-flex align-items-center gap-3 d-lg-none">
+      <button class="rs-hamburger" id="mobileMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="collapse navbar-collapse justify-content-center" id="rsNavCollapse">
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item"><a class="nav-link" href="/features">Features</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pricing</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="/pricing">PaaS Pricing</a></li>
+            <li><a class="dropdown-item" href="/source-code-pricing">Source Code Pricing</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Solutions</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="/enterprise">For Enterprise</a></li>
+            <li><a class="dropdown-item" href="/startup">For Startups</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">RaaS</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="/raas-australia">RaaS Australia</a></li>
+            <li><a class="dropdown-item" href="/raas-canada">RaaS Canada</a></li>
+            <li><a class="dropdown-item" href="/raas-europe">RaaS Europe</a></li>
+            <li><a class="dropdown-item" href="/raas-uk">RaaS UK</a></li>
+            <li><a class="dropdown-item" href="/raas-usa">RaaS USA</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Industries</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="/banks">Banks</a></li>
+            <li><a class="dropdown-item" href="/neo-banks">Neo Banks</a></li>
+            <li><a class="dropdown-item" href="/credit-unions">Credit Unions</a></li>
+            <li><a class="dropdown-item" href="/fintechs">Fintechs</a></li>
+            <li><a class="dropdown-item" href="/msb">MSB</a></li>
+            <li><a class="dropdown-item" href="/exchange-houses">Exchange Houses</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu rs-dd-panel">
+            <li><a class="dropdown-item" href="https://compliance.remitso.com/">Compliance</a></li>
+            <li><a class="dropdown-item" href="https://www.remitso.com/money-transfer-software-development">Bespoke Development</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/demo-apps">Demo Apps</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/blogs">Blog</a></li>
+      </ul>
+    </div>
+    <div class="d-none d-lg-flex align-items-center gap-3">
+      <a href="https://www.remitso.com/contact" class="btn-rs-ghost">Book a Demo</a>
+      <a href="https://www.remitso.com/contact" class="btn-rs-primary">Get Started &rarr;</a>
+    </div>
+  </div>
+</nav>
+<div class="rs-mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="rs-mobile-menu-inner">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <img src="https://www.remitso.com/img/Remitso-logo-RaaS-dark.png" alt="RemitSo" height="30">
+      <button class="rs-mobile-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="rs-mobile-nav" id="mobNav">
+      <a href="/features" onclick="closeMobileMenu()">Features</a>
+      <div class="rs-mob-acc-wrap">
+        <button class="rs-mob-acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mob-pricing" data-bs-parent="#mobNav" aria-expanded="false">Pricing</button>
+        <div class="collapse" id="mob-pricing"><div class="rs-mob-acc-panel">
+          <a href="/pricing" onclick="closeMobileMenu()">PaaS Pricing</a>
+          <a href="/source-code-pricing" onclick="closeMobileMenu()">Source Code Pricing</a>
+        </div></div>
+      </div>
+      <div class="rs-mob-acc-wrap">
+        <button class="rs-mob-acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mob-solutions" data-bs-parent="#mobNav" aria-expanded="false">Solutions</button>
+        <div class="collapse" id="mob-solutions"><div class="rs-mob-acc-panel">
+          <a href="/enterprise" onclick="closeMobileMenu()">For Enterprise</a>
+          <a href="/startup" onclick="closeMobileMenu()">For Startups</a>
+        </div></div>
+      </div>
+      <div class="rs-mob-acc-wrap">
+        <button class="rs-mob-acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mob-raas" data-bs-parent="#mobNav" aria-expanded="false">RaaS</button>
+        <div class="collapse" id="mob-raas"><div class="rs-mob-acc-panel">
+          <a href="/raas-australia" onclick="closeMobileMenu()">RaaS Australia</a>
+          <a href="/raas-canada" onclick="closeMobileMenu()">RaaS Canada</a>
+          <a href="/raas-europe" onclick="closeMobileMenu()">RaaS Europe</a>
+          <a href="/raas-uk" onclick="closeMobileMenu()">RaaS UK</a>
+          <a href="/raas-usa" onclick="closeMobileMenu()">RaaS USA</a>
+        </div></div>
+      </div>
+      <a href="/demo-apps" onclick="closeMobileMenu()">Demo Apps</a>
+      <a href="/blogs" onclick="closeMobileMenu()">Blog</a>
+    </nav>
+    <div class="rs-mobile-ctas mt-4">
+      <a href="https://www.remitso.com/contact" class="btn-rs-primary d-block text-center mb-3">Get Started &rarr;</a>
+      <a href="https://www.remitso.com/contact" class="btn-rs-ghost d-block text-center">Book a Demo</a>
+    </div>
+  </div>
+</div>
+
+<section class="blog-hero">
+  <div class="container-xl">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb blog-hero-breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/blogs">Blog</a></li>
+        <li class="breadcrumb-item active">Adding Remittance to Your Payment Platform: 2026 Guide</li>
+      </ol>
+    </nav>
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="blog-hero-badge mb-3">✦ TECHNOLOGY</div>
+        <h1 class="blog-hero-title mb-4">Adding Remittance to Your Payment<br><span class="blog-hero-accent">Platform: 2026 Guide</span></h1>
+        <p class="blog-hero-desc mb-4">This guide explores the key considerations for integrating remittance services into your payment platform, including regulatory compliance, technology requirements, and market opportunities.</p>
+        <div class="blog-hero-meta">
+          <span>⏱ 12 min read</span>
+          <span class="blog-hero-dot">·</span>
+          <span>🖊 <a href="https://www.remitso.com/blogs" style="color:inherit;text-decoration:none;" class="blog-author-link">Satish Shrivastava</a></span>
+          <span class="blog-hero-dot">·</span>
+          <span>📅 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><div class="container-xl py-5"><div class="row g-5">
+<div class="col-lg-8"><article class="blog-article" itemscope itemtype="https://schema.org/BlogPosting"><meta itemprop="headline" content="Adding Remittance to Your Payment Platform: 2026 Guide"><div itemprop="articleBody"></span>
+
+                        <p itemprop="articleBody">Digital payment platforms have dominated fintech investment and user acquisition for a decade. But the remittance corridor—moving money across borders—remains one of the highest-margin, highest-engagement opportunities in fintech. Global remittances exceeded $905 billion in 2023, with individual transaction FX spreads between 200 and 400 basis points. Payment platforms now see remittance not as a feature bolted onto payments, but as a standalone revenue engine.</p>
+
+                        <p>The question is no longer whether to add remittance. It is how fast you can do it without derailing your core platform. This guide breaks down the three paths available, the licensing reality for each market, the technical and compliance changes required, and why some platforms launch in weeks while others take years.</p>
+
+                        <div class="quick-answer-box">
+                            <strong>Quick Answer</strong>
+                            <ul class="mb-2 blog-sec-layout text-black mt-3">
+                                <li class="text-black">Payment platforms can add remittance through three paths: white-label integration (4–12 weeks), API/RaaS partner, or custom build (12–24 months).</li>
+                                <li class="text-black">Adding remittance typically requires a new or upgraded payment licence in your send market — your existing payment licence may not cover money remittance.</li>
+                                <li class="text-black">Revenue model: FX spread (200–400 bps) plus flat transaction fees — a flat-fee platform means you retain 100% of this margin.</li>
+                                <li class="text-black">Key compliance additions: KYC uplift, AML transaction monitoring, sanctions screening, and Travel Rule for cross-border.</li>
+                                <li class="text-black">A white-label platform is the fastest path — deploy in weeks with compliance infrastructure already built in.</li>
+                            </ul>
+                        </div>
+
+                        <h2>Why Payment Platforms Are Moving Into Remittance</h2>
+
+                        <div class="blog-stat-wrap"><div class="blog-card-body"><div class="ig-title">The Remittance Opportunity in 2026</div>
+                            <div class="row g-3 my-3"><div class="col-6 col-md-3"><div class="blog-stat-card"><div class="fs-2 fw-bold text-primary lh-1">$905B</div></div></div><div class="col-6 col-md-3"><div class="blog-stat-card"><div class="fs-2 fw-bold text-primary lh-1">200–400 bps</div></div></div><div class="col-6 col-md-3"><div class="blog-stat-card"><div class="fs-2 fw-bold text-primary lh-1">73%</div></div></div></div>
+                        </div>
+                        <p class="infographic-caption">Figure 1: The remittance market remains the largest cross-border money flow to developing economies, with margins that dwarf payment processing fees.</p>
+
+                        <p>Three trends collide here. First: regulatory clarity. Platforms in the USA, UK, Canada, EU, and Australia now have defined licensing pathways for remittance, where none existed five years ago. Second: network infrastructure. Payout networks to Africa, Asia, and Latin America are now plug-and-play—you no longer need to build corridors country by country. Third: user demand. Diaspora communities demand remittance inside their existing payment app, not a separate login.</p>
+
+                        <p>The result: payment platforms that do not offer remittance are losing transaction volume and wallet share to those that do.</p>
+
+                        <h2>Four Types of Payment Platforms That Benefit From Adding Remittance</h2>
+
+                        <div class="blog-content-card mb-4">
+  <div class="blog-card-body">
+    <div class="d-flex align-items-center gap-3 mb-3"><span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold step-badge">01</span><h4>Digital Wallets</h4></div>
+    <p class="text-black">Digital wallets like OPay, Moniepoint, and Wave have built consumer trust and transaction frequency. Adding remittance inbound means diaspora can send to relatives inside the wallet ecosystem, creating a new payout channel and increasing daily active users.</p>
+                            <ul>
+                                <li>Direct payout to wallet balances — no agent needed</li>
+                                <li>High engagement — remittance is sticky behavior</li>
+                                <li>Regulatory fit — if you hold balances, remittance licence is adjacent</li>
+                            </ul>
+                            <div class="killer-q">
+                                <em>Revenue potential</em>
+                                "A mid-scale wallet with 2M daily actives moving $5M/month in remittance at 300 bps can earn $150K monthly from FX alone."
+                            </div>
+  </div>
+</div>
+
+                        <div class="blog-content-card mb-4">
+  <div class="blog-card-body">
+    <div class="d-flex align-items-center gap-3 mb-3"><span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold step-badge">02</span><h4>Payment Gateways</h4></div>
+    <p class="text-black">Payment gateways like Stripe, 2Checkout, and Flutterwave process billions in merchant transactions. Adding B2C remittance (not just merchant payouts) opens a new customer segment: diaspora users sending to family overseas.</p>
+                            <ul>
+                                <li>New customer acquisition — consumer remittance vs B2B merchants</li>
+                                <li>Higher transaction value — remittance tickets are 2x–5x payment transactions</li>
+                                <li>Lower chargeback risk — remittance is push, not pull</li>
+                            </ul>
+                            <div class="killer-q">
+                                <em>Revenue potential</em>
+                                "A gateway processing $50M/month in remittance at 250 bps generates $125K monthly — without touching the core merchant business."
+                            </div>
+  </div>
+</div>
+
+                        <div class="blog-content-card mb-4">
+  <div class="blog-card-body">
+    <div class="d-flex align-items-center gap-3 mb-3"><span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold step-badge">03</span><h4>Neobanks & Embedded Finance</h4></div>
+    <p class="text-black">Neobanks and embedded finance platforms (Wise, Revolut, Square Cash) build their model on frequency and stickiness. Remittance is a natural vertical — high frequency, high engagement, and defensible margin.</p>
+                            <ul>
+                                <li>Built-in customer base — move existing balance holders</li>
+                                <li>Cross-sell motion — remittance to debit card, investments, spend</li>
+                                <li>Regulatory optionality — can pursue licence or white-label</li>
+                            </ul>
+                            <div class="killer-q">
+                                <em>Revenue potential</em>
+                                "A neobank with 500K active users converting 5% to remittance users ($10M/month at 300 bps) generates $30K monthly gross margin."
+                            </div>
+  </div>
+</div>
+
+                        <div class="blog-content-card mb-4">
+  <div class="blog-card-body">
+    <div class="d-flex align-items-center gap-3 mb-3"><span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold step-badge">04</span><h4>Crypto & Stablecoin Platforms</h4></div>
+    <p class="text-black">Crypto and stablecoin platforms (Coinbase, Kraken, blockchain remittance startups) see remittance as the on-ramp use case. Stablecoins reduce FX risk and settlement time, making them ideal for cross-border transfer.</p>
+                            <ul>
+                                <li>Regulatory arbitrage — crypto remittance is emerging as a separate licence category</li>
+                                <li>Settlement speed — blockchain settlement in minutes, not days</li>
+                                <li>Emerging market penetration — crypto adoption high in Africa, South Asia</li>
+                            </ul>
+                            <div class="killer-q">
+                                <em>Revenue potential</em>
+                                "A stablecoin platform with $500M in monthly transaction volume can earn $1–2M monthly in spread and fees, even at lower margin (100–150 bps)."
+                            </div>
+  </div>
+</div>
+
+                        <h2>What Changes When You Add Remittance: The Compliance Layer</h2>
+
+                        <div class="warning-box">
+                            <strong>⚠ Licensing Reality Check:</strong> Your existing payment licence (PSR 2017 in UK, FinCEN registration in USA, etc.) almost certainly does NOT include money remittance. You will need a new or upgraded licence, a regulatory application, and a 2–18 month wait depending on jurisdiction. This is the single biggest blocker for payment platforms. Plan early.
+                        </div>
+
+                        <p>Once you decide to add remittance, your compliance architecture changes fundamentally. Payment processing is settlement-agnostic—you move money on behalf of a merchant. Remittance is beneficiary-focused—you are responsible for the person sending AND the person receiving the funds.</p>
+
+                        <div class="note-box">
+                            <strong>Compliance uplift required:</strong> KYC deepens for both sender and receiver (some jurisdictions require beneficial ownership on receive-side), AML transaction monitoring scales (from card velocity to corridors and patterns), sanctions screening becomes continuous, and Travel Rule infrastructure (FATF Recommendation 16) adds metadata requirements to every cross-border transaction.
+                        </div>
+
+                        <p>This is not a compliance checkbox. It is a permanent operational layer. You will hire or contract a Compliance Officer, build a transaction monitoring team, and maintain audit trails for regulators. But if you use a white-label remittance platform, this layer is already built and audited.</p>
+
+                        <h2>Three Integration Paths: White-Label vs. RaaS vs. Custom Build</h2>
+
+                        <div class="infographic-wrap">
+                            <div class="ig-title">White-Label Integration vs. Custom Build</div>
+                            <div class="row g-3 my-3"><div class="col-md-6"><div class="blog-side-info h-100"><div class="fw-bold text-primary mb-3 d-flex align-items-center gap-2"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="14" cy="14" r="13" stroke="#5baeff" stroke-width="1.4" fill="rgba(26,107,220,0.08)" />
+                                            <path d="M8 14l4 4 8-8" stroke="#5baeff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        White-Label / RaaS</div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-primary fw-bold flex-shrink-0">✓</span><span><span class="cmp-icon chk"></span> 4–12 weeks to launch</span></div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-primary fw-bold flex-shrink-0">✓</span><span><span class="cmp-icon chk"></span> Compliance pre-built</span></div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-primary fw-bold flex-shrink-0">✓</span><span><span class="cmp-icon chk"></span> Payout network ready</span></div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-primary fw-bold flex-shrink-0">✓</span><span><span class="cmp-icon chk"></span> Low upfront cost</span></div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-primary fw-bold flex-shrink-0">✓</span><span><span class="cmp-icon chk"></span> Keep 100% of FX spread</span></div></div></div><div class="col-md-6"><div class="blog-side-danger h-100"><div class="fw-bold text-danger mb-3 d-flex align-items-center gap-2"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="14" cy="14" r="13" stroke="#ff6b6b" stroke-width="1.4" fill="rgba(220,26,26,0.08)" />
+                                            <path d="M9 9l10 10M19 9l-10 10" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                        Custom Build</div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-danger fw-bold flex-shrink-0">✗</span><span><span class="cmp-icon x"></span> 12–24 months to launch</span></div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-danger fw-bold flex-shrink-0">✗</span><span><span class="cmp-icon x"></span> Compliance team required</span></div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-danger fw-bold flex-shrink-0">✗</span><span><span class="cmp-icon x"></span> Each corridor built separately</span></div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-danger fw-bold flex-shrink-0">✗</span><span><span class="cmp-icon x"></span> $200K–$400K+ upfront</span></div><div class="d-flex gap-2 py-2 border-bottom small"><span class="text-danger fw-bold flex-shrink-0">✗</span><span><span class="cmp-icon x"></span> Full operational ownership</span></div></div></div></div>
+                        </div>
+                        <p class="infographic-caption">Figure 2: Comparison of integration approaches for payment platforms adding remittance.</p>
+
+                        <h3>Path 1: White-Label Integration (4–12 weeks)</h3>
+
+                        <p>A white-label remittance platform gives you a branded mobile app (iOS/Android) and web dashboard, pre-integrated with a payout network across 100+ countries. You embed remittance as a feature inside your existing payment platform or offer it as a separate branded product. The compliance stack, KYC flows, AML monitoring, and audit trails are already in place.</p>
+
+                        <p>Cost is low: $7,499 one-time setup plus $99–$499/month depending on volume and corridors. Revenue is yours: you keep 100% of the FX spread and all transaction fees. The platform does not take a cut; it is a flat-fee model.</p>
+
+                        <p>Drawback: you are dependent on the white-label provider for updates, payout corridors, and feature roadmap. But for a platform that wants to launch remittance without rebuilding, white-label is the path that works.</p>
+
+                        <h3>Path 2: API / RaaS Partner (8–16 weeks)</h3>
+
+                        <p>Some platforms want to build their own frontend but lease the backend. RaaS (Remittance-as-a-Service) providers expose compliance, AML, KYC, and payout network through an API. You own the UI and UX; the RaaS partner owns operations.</p>
+
+                        <p>Cost: custom pricing, typically $2K–$5K/month plus transaction fees or spread share. Timeline is faster than custom build, slower than white-label.</p>
+
+                        <p>This path suits platforms with strong design teams and existing payment stacks who want remittance without outsourcing the entire product.</p>
+
+                        <h3>Path 3: Custom Build (12–24 months, $200K–$400K+)</h3>
+
+                        <p>Building remittance in-house means hiring a Compliance Officer, AML analysts, KYC engineers, and backend developers. You negotiate payout corridors directly (or through multiple providers), build your own AML/CTF case management system, implement Travel Rule infrastructure, and handle regulatory correspondence yourself.</p>
+
+                        <p>Timeline: 12–24 months. Cost: $200K–$400K for the first year alone, plus $50K–$150K/month in operational overhead. Advantage: full code ownership and control. Drawback: only justified if remittance is your core business, not an expansion.</p>
+
+                        <h2>Licensing Requirements by Send Market</h2>
+
+                        <div class="infographic-wrap">
+                            <div class="ig-title">Licensing Requirements by Send Market</div>
+                            <div class="ig-table-wrap">
+                                <table class="ig-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Market</th>
+                                            <th>Licence Type</th>
+                                            <th>Regulator</th>
+                                            <th>Timeline</th>
+                                            <th>Complexity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>USA</strong></td>
+                                            <td>State MTLs + FinCEN MSB</td>
+                                            <td>FinCEN + State</td>
+                                            <td>6–18 months</td>
+                                            <td><span class="tag tag-red">High</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>UK</strong></td>
+                                            <td>PI or EMI authorisation</td>
+                                            <td>FCA</td>
+                                            <td>3–12 months</td>
+                                            <td><span class="tag tag-amber">Medium</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Canada</strong></td>
+                                            <td>FINTRAC MSB registration</td>
+                                            <td>FINTRAC</td>
+                                            <td>2–4 weeks</td>
+                                            <td><span class="tag tag-green">Lower</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>EU</strong></td>
+                                            <td>PI or EMI licence</td>
+                                            <td>National NCA</td>
+                                            <td>6–18 months</td>
+                                            <td><span class="tag tag-amber">Medium</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Australia</strong></td>
+                                            <td>AUSTRAC registration</td>
+                                            <td>AUSTRAC</td>
+                                            <td>4–6 weeks</td>
+                                            <td><span class="tag tag-green">Lower</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <p class="infographic-caption">Figure 3: Indicative licensing requirements for platforms adding outbound remittance by send market.</p>
+
+                        <p>The licensing puzzle changes depending on where you want to operate as a sender. A USA-based platform must obtain Money Transmitter Licences (MTLs) from each state where it operates, plus federal MSB registration with FinCEN. A UK platform must become an Authorised Payment Institution or Electronic Money Institution under FCA supervision. A Canadian platform must register with FINTRAC, which is faster.</p>
+
+                        <p>The critical detail: you may already be licensed for payment processing in these jurisdictions, but that licence does NOT cover remittance. You need to apply separately, often involving new applications, board minutes, and compliance officers dedicated to remittance.</p>
+
+                        <div class="stat-note">
+                            <strong>Licence timeline range:</strong> Canada (2–4 weeks) to USA (6–18 months). If you plan to serve multiple send markets, prioritize by corridor volume and regulatory relationships. A single-market launch reduces complexity by 40%.
+                        </div>
+
+                        <h2>Revenue Model: How Payment Platforms Earn From Remittance</h2>
+
+                        <p>Remittance revenue flows from two sources: FX spread and transaction fees. The FX spread is the difference between the rate you offer the sender and the actual interbank rate. A typical spread is 200–400 basis points (2–4%).</p>
+
+                        <p>If a sender remits $1,000 USD to India at a rate of 83.20 INR/USD, but you quote 81.80 INR/USD, you capture the 1.40 INR difference per dollar = 140 basis points of spread. On a $1,000 transaction, that is $140 gross revenue.</p>
+
+                        <p>Transaction fees sit on top: typically $0.99–$4.99 per transaction depending on corridor and amount. This is pure margin for a flat-fee platform.</p>
+
+                        <div class="stat-note">
+                            <strong>Flat-fee model advantage:</strong> If you use a white-label platform at flat monthly cost, you keep 100% of FX spread and transaction fees. You do not split revenue with the provider. This is fundamentally different from revenue-share models (which take 10–40% cut) or per-transaction pricing (which scale your costs with volume).
+                        </div>
+
+                        <p>Revenue scales with volume. A platform processing $10M/month in remittance at 300 bps spread plus $2.00 per transaction (average) generates $30K/month gross FX margin plus $200K+ in transaction fees = $230K/month minimum. That is $2.76M annually from remittance alone.</p>
+
+                        <h2>Technical Integration: Five Steps to Add Remittance</h2>
+
+                        <div class="infographic-wrap">
+                            <div class="ig-title">Adding Remittance: Technical Integration in 5 Steps</div>
+                            <div class="blog-step-list"><div class="d-flex gap-3 align-items-start py-3 border-bottom"><span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold step-badge flex-shrink-0">01</span><div><div class="fw-bold text-navy mb-1">API Authentication & Credential Onboarding</div><div class="text-secondary small lh-base">Integrate your payment system with the remittance provider's API. Exchange keys, test sandbox environment, and verify transaction webhook callbacks. If using white-label, this step is minimal—provider handles API backend.</div></div></div>
+                                <div class="d-flex gap-3 align-items-start py-3 border-bottom"><span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold step-badge flex-shrink-0">02</span><div><div class="fw-bold text-navy mb-1">KYC Data Mapping</div><div class="text-secondary small lh-base">Map your existing KYC fields (sender name, ID type, address) to the remittance provider's schema. For receive-side, add beneficiary data collection. Test data validation and rejection handling for incomplete KYC profiles.</div></div></div>
+                                <div class="d-flex gap-3 align-items-start py-3 border-bottom"><span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold step-badge flex-shrink-0">03</span><div><div class="fw-bold text-navy mb-1">FX Rate & Corridor Setup</div><div class="text-secondary small lh-base">Configure live FX rates (sourced from provider or an external rate service). Set up remittance corridors (e.g., USD to INR, GBP to NGN) with corridor-specific fees and limits. Test rate refresh frequency and rounding rules.</div></div></div>
+                                <div class="d-flex gap-3 align-items-start py-3 border-bottom"><span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold step-badge flex-shrink-0">04</span><div><div class="fw-bold text-navy mb-1">Beneficiary & Payout Network Integration</div><div class="text-secondary small lh-base">Integrate with payout networks (e.g., Wise for EU, M-Pesa for Kenya, UPI for India). Test payout settlement timing, failure handling, and refunds. Configure beneficiary bank details validation and routing rules.</div></div></div>
+                                <div class="d-flex gap-3 align-items-start py-3 border-bottom"><span class="badge rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold step-badge flex-shrink-0">05</span><div><div class="fw-bold text-navy mb-1">AML Monitoring & Compliance Webhooks</div><div class="text-secondary small lh-base">Connect your transaction monitoring system to the remittance provider's AML alerts. Set up webhooks for sanctions hits, high-risk corridors, and threshold breaches. Test case management workflows and regulatory reporting exports.</div></div></div></div>
+                        </div>
+                        <p class="infographic-caption">Figure 4: Standard integration workflow for payment platforms adding remittance.</p>
+
+                        <p>The technical integration is straightforward if you use a white-label or RaaS provider. Most remittance APIs expose simple transaction endpoints (initiate, status, cancel). The complexity lies in KYC data mapping, FX rate management, and compliance webhook handling.</p>
+
+                        <p>If you build custom: multiply the effort by 5-10x, add 3–6 months per corridor, and budget for constant payout network integration maintenance.</p>
+
+                        <h2>How RemitSo Enables Payment Platforms to Add Remittance</h2>
+
+                        <p>RemitSo is a white-label remittance platform for payment operators, neobanks, and fintechs across the USA, UK, Canada, EU, UAE, and Australia. It provides a production-ready remittance stack: mobile app and web dashboard (white-labeled to your brand), compliance and KYC infrastructure, AML monitoring with 55+ indicators, real-time sanctions screening across 8+ global lists, and a payout network spanning 100+ countries.</p>
+
+                        <p>The platform is built for volume. It handles 5,000+ transactions per second with API response times under 120ms. It is certified ISO/IEC 27001:2022 and PCI-DSS compliant, so you inherit security and data protection assurance without rebuilding. Integration is standard: REST API for transaction management, webhooks for AML alerts, and sandbox environment for testing.</p>
+
+                        <p>Revenue is yours entirely. RemitSo charges a flat fee ($7,499 one-time, $99–$499/month depending on corridor coverage and support tier). It takes no revenue share, no per-transaction fees, no spread cut. You keep 100% of FX margin and transaction fees. This pricing model is designed for payment operators who want to scale remittance without cannibalizing their unit economics.</p>
+
+                        <div class="rs-cta">
+                            <h3>RemitSo: Built for Payment Platforms Expanding Into Remittance</h3>
+                            <p>RemitSo gives payment operators a production-ready remittance stack — compliance, payout network, and white-label frontend — without the 12-month build timeline.</p>
+                            <ul class="rs-cta-grid">
+                                <li>White-label mobile and web — your brand</li>
+                                <li>Multi-corridor payout network — 100+ countries</li>
+                                <li>55+ AML monitoring indicators</li>
+                                <li>Real-time sanctions screening — 8+ global lists</li>
+                                <li>5,000+ TPS capacity — scales with your volume</li>
+                                <li>No revenue share — flat fee model</li>
+                            </ul>
+                            <div>
+                                <a href="" data-toggle="modal" data-bs-target="#exampleModal-request-demo-2" class="cta-btn">Request a Demo →</a>
+                                <a href="/pricing" class="cta-btn-outline">View Pricing</a>
+                                <a href="/casestudies" class="cta-btn-outline">Read Case Studies</a>
+                            </div>
+                        </div>
+
+                        <h2 id="faq" class="mb-3 font-weight-bold mt-4">Frequently Asked Questions</h2>
+
+                        <div class="mb-5" itemscope itemtype="https://schema.org/FAQPage">
+
+<h2 class="fw-bold mb-4">What Payment Platforms Ask About Adding Remittance</h2>
+<div class="accordion blog-faq-accordion" id="faq-adding-remittance-to-your-0">
+<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 class="accordion-header" id="faq-adding-remittance-to-your-0-0-h">
+    <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-adding-remittance-to-your-0-0-body" aria-expanded="true" aria-controls="faq-adding-remittance-to-your-0-0-body" itemprop="name">
+      Does my existing payment licence cover remittance?
+    </button>
+  </h3>
+  <div id="faq-adding-remittance-to-your-0-0-body" class="accordion-collapse collapse show" aria-labelledby="faq-adding-remittance-to-your-0-0-h" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="accordion-body" itemprop="text">
+      No. Payment licences in the UK (PSR 2017), USA (FinCEN MSB), EU (PSD2), and other major markets do not automatically cover money remittance. Remittance is a separate regulated activity with its own licensing requirements. You will need to apply for a new licence or upgrade your existing one. This is the single biggest regulatory blocker for payment platforms adding remittance — plan the application process before committing to a launch timeline.
+    </div>
+  </div>
+</div>
+<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 class="accordion-header" id="faq-adding-remittance-to-your-0-1-h">
+    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-adding-remittance-to-your-0-1-body" aria-expanded="false" aria-controls="faq-adding-remittance-to-your-0-1-body" itemprop="name">
+      What is the difference between white-label and RaaS / API?
+    </button>
+  </h3>
+  <div id="faq-adding-remittance-to-your-0-1-body" class="accordion-collapse collapse" aria-labelledby="faq-adding-remittance-to-your-0-1-h" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="accordion-body" itemprop="text">
+      White-label means you get a complete branded app (mobile and web) with all compliance and operations pre-built. You launch a remittance product under your brand without writing code. RaaS (API) means you lease the backend infrastructure and compliance while building your own frontend UI. White-label is faster (4–12 weeks); RaaS is faster than a custom build (8–16 weeks) but slower than white-label. Choose white-label if speed is the priority; choose RaaS if you want full control of the user interface.
+    </div>
+  </div>
+</div>
+<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 class="accordion-header" id="faq-adding-remittance-to-your-0-2-h">
+    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-adding-remittance-to-your-0-2-body" aria-expanded="false" aria-controls="faq-adding-remittance-to-your-0-2-body" itemprop="name">
+      What compliance changes do I need to make to add remittance?
+    </button>
+  </h3>
+  <div id="faq-adding-remittance-to-your-0-2-body" class="accordion-collapse collapse" aria-labelledby="faq-adding-remittance-to-your-0-2-h" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="accordion-body" itemprop="text">
+      Adding remittance requires a deeper KYC on both sender and receiver (including beneficial ownership for the receive-side in some jurisdictions), ongoing AML transaction monitoring, real-time sanctions screening, and Travel Rule metadata infrastructure (FATF Recommendation 16) for cross-border transfers above threshold. Audit trails for regulatory reporting are mandatory. If you use a white-label platform, this layer is pre-built and already audited — no additional compliance build required on your end.
+    </div>
+  </div>
+</div>
+<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 class="accordion-header" id="faq-adding-remittance-to-your-0-3-h">
+    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-adding-remittance-to-your-0-3-body" aria-expanded="false" aria-controls="faq-adding-remittance-to-your-0-3-body" itemprop="name">
+      How do payment platforms earn revenue from remittance?
+    </button>
+  </h3>
+  <div id="faq-adding-remittance-to-your-0-3-body" class="accordion-collapse collapse" aria-labelledby="faq-adding-remittance-to-your-0-3-h" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="accordion-body" itemprop="text">
+      Two revenue streams: FX spread (200–400 basis points on every transaction) and transaction fees ($0.99–$4.99 per send). A flat-fee platform that uses a white-label provider keeps 100% of this margin. A platform processing $10M/month in remittance at 300 bps plus $2 per transaction generates $30K monthly from FX margin alone, plus $200K+ in transaction fees — totalling $230K+ monthly gross revenue from remittance.
+    </div>
+  </div>
+</div>
+<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 class="accordion-header" id="faq-adding-remittance-to-your-0-4-h">
+    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-adding-remittance-to-your-0-4-body" aria-expanded="false" aria-controls="faq-adding-remittance-to-your-0-4-body" itemprop="name">
+      What is the fastest path to launch remittance?
+    </button>
+  </h3>
+  <div id="faq-adding-remittance-to-your-0-4-body" class="accordion-collapse collapse" aria-labelledby="faq-adding-remittance-to-your-0-4-h" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="accordion-body" itemprop="text">
+      White-label integration: 4–12 weeks from contract to first live transaction. This includes platform onboarding, KYC data mapping, FX rate configuration, and payout network testing. Custom build takes 12–24 months. RaaS sits in between at 8–16 weeks. For any platform where remittance is a product expansion rather than a core rebuild, white-label is the only path that makes commercial sense.
+    </div>
+  </div>
+</div>
+<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 class="accordion-header" id="faq-adding-remittance-to-your-0-5-h">
+    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-adding-remittance-to-your-0-5-body" aria-expanded="false" aria-controls="faq-adding-remittance-to-your-0-5-body" itemprop="name">
+      What payout network options are available?
+    </button>
+  </h3>
+  <div id="faq-adding-remittance-to-your-0-5-body" class="accordion-collapse collapse" aria-labelledby="faq-adding-remittance-to-your-0-5-h" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="accordion-body" itemprop="text">
+      Multiple corridors are now plug-and-play: India (UPI, IMPS, bank transfer), Africa (M-Pesa, OPay, bank networks), Philippines (GCash, bank transfer), Pakistan (JazzCash, EasyPaisa), and traditional global correspondent banking. A white-label provider typically integrates the largest corridors immediately, with additional corridors available on request. Custom builds require negotiating each corridor separately — adding months per corridor and significant ongoing maintenance.
+    </div>
+  </div>
+</div>
+<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 class="accordion-header" id="faq-adding-remittance-to-your-0-6-h">
+    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-adding-remittance-to-your-0-6-body" aria-expanded="false" aria-controls="faq-adding-remittance-to-your-0-6-body" itemprop="name">
+      What is a RaaS partner, and how is it different from white-label?
+    </button>
+  </h3>
+  <div id="faq-adding-remittance-to-your-0-6-body" class="accordion-collapse collapse" aria-labelledby="faq-adding-remittance-to-your-0-6-h" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="accordion-body" itemprop="text">
+      A RaaS (Remittance-as-a-Service) partner provides the backend: KYC, AML, compliance, payout network, and regulatory reporting. You build your own frontend and own the brand and user experience entirely. White-label means you receive the full app (frontend and backend) already branded as your own. RaaS requires frontend engineering; white-label requires almost none. RaaS gives more UI flexibility; white-label delivers a faster launch at lower technical cost.
+    </div>
+  </div>
+</div>
+<div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 class="accordion-header" id="faq-adding-remittance-to-your-0-7-h">
+    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-adding-remittance-to-your-0-7-body" aria-expanded="false" aria-controls="faq-adding-remittance-to-your-0-7-body" itemprop="name">
+      Is a white-label remittance platform the right choice for my payment platform?
+    </button>
+  </h3>
+  <div id="faq-adding-remittance-to-your-0-7-body" class="accordion-collapse collapse" aria-labelledby="faq-adding-remittance-to-your-0-7-h" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <div class="accordion-body" itemprop="text">
+      White-label is the right choice if you want to launch remittance in weeks rather than years, if you do not have a compliance and AML infrastructure in-house, if you want to keep 100% of FX margin, and if your send markets have existing licensing pathways (USA, UK, Canada, EU, Australia). White-label is not suited to platforms where remittance is the core business requiring full customisation. For payment platforms adding remittance as a product expansion, white-label is the standard and most cost-effective path.
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+                        <div class="cta-banner">
+                            <h3>Ready to Add Remittance to Your Payment Platform?</h3>
+                            <p class="mb-4">Use our build vs buy calculator to model your costs and timeline before you commit to a path.</p>
+                            <a href="https://www.remitso.com/build-vs-white-label-calculator" class="cta-btn">Calculate Your Costs →</a>
+                        </div></div></article></div>
+<div class="col-lg-4">
+
+  <!-- ── TABLE OF CONTENTS ── -->
+  <div class="blog-sidebar-box mb-4">
+    <div class="blog-sidebar-box-hd">📋 In This Article</div>
+    <div class="blog-card-body">
+      <ul class="blog-toc-list list-unstyled mb-0" id="tocList"></ul>
+    </div>
+  </div>
+
+  <!-- ── PROMO: FREE DEMO ── -->
+  <div class="blog-promo-cta mb-4">
+    <div class="blog-promo-badge">🚀 Free 30-Min Demo</div>
+    <h5 class="blog-promo-h">Launch Your Money Transfer Business</h5>
+    <p class="blog-promo-sub">White-label platform. 4–8 week launch. No revenue share.</p>
+    <a href="/remittance-software/" class="btn-rs-primary d-block text-center mb-2">Book a Free Demo &rarr;</a>
+    <a href="https://wa.me/+918904500297?text=Hi+RemitSo,+I+want+to+learn+more." target="_blank" class="blog-promo-wa">💬 WhatsApp Us Now</a>
+  </div>
+
+  <!-- ── RELATED POSTS ── -->
+  <div class="blog-sidebar-box mb-4">
+    <div class="blog-sidebar-box-hd">📖 Related Articles</div>
+    <ul class="list-unstyled mb-0 blog-sidebar-links">
+        <li><a href="/blogs/automated-kyc-money-transfer-operators/" class="blog-sidebar-link">Automated KYC for Money Transfer Operators: Fast, Compliant AML</a></li>
+        <li><a href="/blogs/suspicious-activity-report/" class="blog-sidebar-link">Suspicious Activity Report (SAR): Filing Tips & Examples 2025</a></li>
+        <li><a href="/blogs/Remittance-erp/" class="blog-sidebar-link">Remittance ERP: Complete Guide to Modern Money Transfer</a></li>
+        <li><a href="/blogs/protect-business-from-payment-fraud/" class="blog-sidebar-link">How to Protect Your Business from Payment Fraud (2026 Guide)</a></li>
+        <li><a href="/blogs/first-regulatory-audit-money-transfer-operator/" class="blog-sidebar-link">First Regulatory Audit for Money Transfer Operators</a></li>
+        <li><a href="/blogs/remittance-dependent-countries-2026/" class="blog-sidebar-link">Countries Most Dependent on Remittances in 2026</a></li>
+    </ul>
+  </div>
+
+  <!-- ── FEATURED PAGES ── -->
+  <div class="blog-sidebar-box mb-4">
+    <div class="blog-sidebar-box-hd">🔗 Explore RemitSo</div>
+    <ul class="list-unstyled mb-0 blog-sidebar-links">
+        <li><a href="/remittance-software/" class="blog-sidebar-link">Remittance Software Platform</a></li>
+        <li><a href="/pricing" class="blog-sidebar-link">PaaS Pricing — from $7,499</a></li>
+        <li><a href="/source-code-pricing" class="blog-sidebar-link">Source Code Licence — $77,999</a></li>
+        <li><a href="/raas-usa" class="blog-sidebar-link">RaaS USA — 50-State Coverage</a></li>
+        <li><a href="/raas-uk" class="blog-sidebar-link">RaaS UK — FCA Licensed</a></li>
+        <li><a href="/raas-australia" class="blog-sidebar-link">RaaS Australia — AUSTRAC</a></li>
+        <li><a href="/features" class="blog-sidebar-link">Platform Features</a></li>
+        <li><a href="/demo-apps" class="blog-sidebar-link">Try Demo Apps</a></li>
+    </ul>
+  </div>
+
+  <!-- ── PROMO: KEY STATS ── -->
+  <div class="blog-stats-box mb-4">
+    <div class="blog-sidebar-box-hd">📊 RemitSo by the Numbers</div>
+    <div class="blog-stat-row"><span class="blog-stat-num">$2.5B+</span><span class="blog-stat-lbl">Annual transaction volume</span></div>
+    <div class="blog-stat-row"><span class="blog-stat-num">99.99%</span><span class="blog-stat-lbl">Platform uptime SLA</span></div>
+    <div class="blog-stat-row"><span class="blog-stat-num">15 sec</span><span class="blog-stat-lbl">KYC onboarding time</span></div>
+    <div class="blog-stat-row"><span class="blog-stat-num">100+</span><span class="blog-stat-lbl">Payout countries</span></div>
+    <div class="blog-stat-row"><span class="blog-stat-num">$7,499</span><span class="blog-stat-lbl">PaaS one-time setup</span></div>
+  </div>
+
+  <!-- ── PROMO: CERTIFICATIONS ── -->
+  <div class="blog-cert-box">
+    <div class="blog-sidebar-box-hd">🔐 Certified &amp; Trusted</div>
+    <div class="blog-cert-badges">
+      <span class="blog-cert-badge">ISO 27001:2022</span>
+      <span class="blog-cert-badge">ISO 9001:2015</span>
+      <span class="blog-cert-badge">PCI-DSS</span>
+      <span class="blog-cert-badge">97% Auto AML</span>
+    </div>
+    <a href="/remittance-software/" class="blog-promo-wa mt-3 d-block">View Platform &rarr;</a>
+  </div>
+
+</div></div></div></div><footer class="rs-footer pt-5 pb-4">
+  <div class="container-xl">
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4">
+        <a href="/"><img src="https://www.remitso.com/img/Remitso-logo-RaaS-dark.png" alt="RemitSo" height="36" class="mb-3"></a>
+        <p class="text-muted small lh-lg mb-3">White-label remittance software powering $2.5B+ in annual transaction volume. Launch your money transfer business in weeks, not years.</p>
+        <div class="d-flex gap-3 align-items-center flex-wrap">
+          <span class="badge bg-primary-subtle text-primary small">ISO 27001</span>
+          <span class="badge bg-success-subtle text-success small">PCI-DSS</span>
+          <span class="badge bg-warning-subtle text-warning small">ISO 9001</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="fw-semibold small mb-3 rs-text-navy">Platform</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="/features" class="text-muted text-decoration-none">Features</a></li>
+          <li class="mb-2"><a href="/pricing" class="text-muted text-decoration-none">Pricing</a></li>
+          <li class="mb-2"><a href="/source-code-pricing" class="text-muted text-decoration-none">Source Code</a></li>
+          <li class="mb-2"><a href="/demo-apps" class="text-muted text-decoration-none">Demo Apps</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="fw-semibold small mb-3 rs-text-navy">Company</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="/blogs" class="text-muted text-decoration-none">Blog</a></li>
+          <li class="mb-2"><a href="/case-studies.html" class="text-muted text-decoration-none">Case Studies</a></li>
+          <li class="mb-2"><a href="/faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+          <li class="mb-2"><a href="/privacy-policy" class="text-muted text-decoration-none">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="fw-semibold small mb-3 rs-text-navy">Solutions</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="/startup" class="text-muted text-decoration-none">For Startups</a></li>
+          <li class="mb-2"><a href="/enterprise" class="text-muted text-decoration-none">Enterprise</a></li>
+          <li class="mb-2"><a href="/banks" class="text-muted text-decoration-none">Banks</a></li>
+          <li class="mb-2"><a href="/fintechs" class="text-muted text-decoration-none">Fintechs</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="fw-semibold small mb-3 rs-text-navy">Contact</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="mailto:Connect@remitso.com" class="text-muted text-decoration-none">Connect@remitso.com</a></li>
+          <li class="mb-2"><a href="https://wa.me/918904500297" class="text-muted text-decoration-none">WhatsApp</a></li>
+          <li class="mb-2"><a href="https://www.remitso.com/contact" class="text-muted text-decoration-none">Book a Demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-top pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="text-muted small mb-0">&copy; 2026 Prymera Consulting Pvt Ltd. All rights reserved. RemitSo&reg; is a registered brand.</p>
+      <div class="d-flex gap-3">
+        <a href="/privacy-policy" class="text-muted small text-decoration-none">Privacy</a>
+        <a href="/terms" class="text-muted small text-decoration-none">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+function openMobileMenu() { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeMobileMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+});
+const tocLinks = document.querySelectorAll('.blog-toc-item a');
+const secEls = document.querySelectorAll('[id^="sec-"]');
+if (secEls.length > 0) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('fw-semibold'));
+        const a = document.querySelector('.blog-toc-item a[href="#' + e.target.id + '"]');
+        if (a) a.classList.add('fw-semibold');
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-80px 0px -60% 0px' });
+  secEls.forEach(s => obs.observe(s));
+}
+</script>
+</body>
+</html>
